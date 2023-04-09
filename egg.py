@@ -3,17 +3,17 @@ import time
 import pygame
 from random import randint
 
-pygame.mixer_music.load('hello.mp3')
+pygame.mixer_music.load('mus.mp3')
 pygame.mixer_music.play()
-play.set_backdrop('light green')
+play.set_backdrop('violet')
 hello_txt=play.new_text(words='Catch 10 EGGS!', x=0, y=play.screen.height/2-30)
 
-egg=play.new_circle(color='white', x=0, y=0, radius=30, border_color='grey', border_width=2)
+egg=play.new_circle(color='pink', x=0, y=0, radius=25, border_color='grey', border_width=2)
 #egg = play.new_image(image='pic.png', x=0, y=0, angle=0, size=30, transparency=100)
 eggs=[egg]
 eggs_amount=play.new_text(words='0', x=300, y=play.screen.height/2-30, color='yellow')
 
-backet=play.new_image(image='корзина.png', x=0, y=-play.screen.height/2+50, size=20)
+backet=play.new_image(image='corzz.png', x=0, y=-play.screen.height/2+50, size=20)
 #backet=play.new_image(image='archi.png', x=0, y=-play.screen.height/2+80, size=80)
 frames = 48 
 old_time = 0
@@ -65,7 +65,7 @@ async def game():
 
     #новые яйцв
     if time.time()-old_time > 3:
-        new_egg = play.new_circle(color='white', x=0, y=0, radius=30, border_color='grey', border_width=2)
+        new_egg = play.new_circle(color='pink', x=0, y=0, radius=25, border_color='grey', border_width=2)
         #new_egg = play.new_image(image='pic.png', x=0, y=0, angle=0, size=30, transparency=100)
         new_egg.x = randint(-play.screen.width/2+20, play.screen.width/2-20)
         new_egg.y = play.screen.height/2-20
